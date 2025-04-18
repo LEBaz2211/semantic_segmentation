@@ -1,0 +1,12 @@
+{
+  "python.autoComplete.extraPaths": [
+    "/home/basil/ros2_ws/install/terrain_traversibility/lib/python3.12/site-packages",
+    "/home/basil/ros2_ws/install/terrain_segmentation/lib/python3.12/site-packages",
+    "/opt/ros/jazzy/lib/python3.12/site-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/home/basil/ros2_ws/install/terrain_traversibility/lib/python3.12/site-packages",
+    "/home/basil/ros2_ws/install/terrain_segmentation/lib/python3.12/site-packages",
+    "/opt/ros/jazzy/lib/python3.12/site-packages"
+  ]
+}

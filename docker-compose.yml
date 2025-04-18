@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  semantic_segmentation:
+    image: semantic_segmentation:dev
+    container_name: semantic_segmentation
+    network_mode: host
+    environment:
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - ROS_DOMAIN_ID=69
+    volumes:
+      - ./models:/ros2_ws/src/semantic_segmentation/models:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: ros2 launch semantic_segmentation debug_speed.launch.py
